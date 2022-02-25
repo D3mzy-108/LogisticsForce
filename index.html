@@ -56,6 +56,16 @@
                     $(".input:nth-child(2)").addClass("py-3").removeClass("py-1")
                 }
             })
+            $("button[type='submit']").click(function() {
+                if ($("#username").text().toLowerCase() == "admin" && $("#password").text().toLowerCase() == "admin") {
+                    $(location).attr('href','./admin.html');
+                }else{alert("Incorrect username or password")}
+                // } else if($("#username").text().toLowerCase() == "user" && $("#password").text().toLowerCase() == "user"){
+                    
+                // } else if($("#username").text().toLowerCase() == "user" && $("#password").text().toLowerCase() == "user"){
+                    
+                // }
+            })
         })
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
