@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Questrial', sans-serif;
+}
+p, small{
+    font-family: 'Baloo 2', cursive;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background: whitesmoke;
+    box-shadow: 0 0 8px #bbb;
+    border-radius: 15px;
+}
+
+.input{
+    background: white;
+    border-radius: 10px;
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+label{
+    color: black;
+    font-weight: 500;
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+input{
+    border: none;
+    outline: none;
+    display: none;
+    background: none;
+    border-bottom: 1px solid #ccc;
+    width: 0%;
+    transition: .5s;
+}

@@ -1,0 +1,31 @@
+DARK MODE:
+  nav&header(gradient: linear): #374077, #22264B, to bottom.
+  main(gradient: linear): #394577, #21254A, to bottom.
+  right sidebar(gradient: radial): #383F76, #23274D, to center top.
+  active nav item:
+    background: #39406C,
+    border-left: #656DAB,
+  container in main:
+    active: #5B63B8,
+    non-active: #292C59
+  text:
+    red highlight: #966990,
+    green highlight: #4B7F8A,
+    important data: #EEF5FF,
+    non-important data: #71749F,
+
+LIGHT MODE:
+  nav&header: #FFF.
+  main: #F1F2F7.
+  right sidebar: #FFF.
+  active nav item:
+    background: #F7F9F8,
+    border-left: #9C97B5,
+  containers in main:
+    active: #6A74C9,
+    non-active: #FFF
+  text:
+    red highlight: #6E5453,
+    green highlight: #9CC8B9,
+    important data: #27262B,
+    non-important data: #D1D1D1,

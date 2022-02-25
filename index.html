@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="form_cont col-10 col-md-5">
+        <h2 class="text-center py-3">Login</h2>
+        <form action="" class="form col-12 p-4 d-flex flex-wrap justify-content-center">
+            <div class="input px-3 py-3 col-12 d-flex flex-wrap justify-content-start">
+                <span class="col-12"><label for="username">Username*</label></span>
+                <input type="text" id="username">
+            </div>
+            <div class="input px-3 py-3 col-12 my-4 d-flex flex-wrap justify-content-start">
+                <span class="col-12"><label for="password">Password*</label></span>
+                <input type="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-outline-secondary">Submit</button>
+        </form>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+            // Form animation code
+            $("label").click(function(e){
+                $(e.target.parentElement.parentElement.children[1]).slideDown().css("width","100%")
+                $(e.target).css("transform", "scale(0.7) translateX(-23px)")
+                $(e.target.parentElement.parentElement).removeClass("py-3").addClass("py-1")
+            })
+            $(".input:nth-child(1) input").focusout(function(){
+                var input_length = document.querySelector(".input:nth-child(1) input").value.length
+
+                if(input_length == 0){
+                    $(".input:nth-child(1) input").slideUp().css("width","0px")
+                    $(".input:nth-child(1) label").css("transform", "scale(1.0)")
+                    $(".input:nth-child(1)").addClass("py-3").removeClass("py-1")
+                }
+            })
+            $(".input:nth-child(2) input").focusout(function(){
+                var input_length = document.querySelector(".input:nth-child(2) input").value.length
+
+                if(input_length == 0){
+                    $(".input:nth-child(2) input").slideUp().css("width","0px")
+                    $(".input:nth-child(2) label").css("transform", "scale(1.0)")
+                    $(".input:nth-child(2)").addClass("py-3").removeClass("py-1")
+                }
+            })
+        })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

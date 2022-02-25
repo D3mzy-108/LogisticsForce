@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+      integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="d-flex col-12 align-items-center">
+      <nav class="col-5 col-md-3 col-lg-2 py-3" style="height: 100vh;">
+        <div class="col-6 pb-3 px-2">
+          <img src="./images/logo-removebg-preview.png" alt="Logo" class="image-fluid col-12">
+        </div>
+        <ul class="p-0 col-12">
+          <li class="active px-3 py-2 col-11"><a href="#">Analysis</a></li>
+          <li class="px-3 py-2 col-11"><a href="#">Drivers</a></li>
+          <li class="px-3 py-2 col-11"><a href="#">Reports</a></li>
+          <li class="px-3 py-2 col-11"><a href="#">Staff</a></li>
+          <li
+            class="mt-5 px-3 py-2 d-flex justify-content-between align-items-center"
+          >
+            <span>Dark Theme</span>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round change_theme"></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- ANALYSIS -->
+      <main class="col-12 col-md-9 col-lg-10 d-flex" id="analysis">
+        <div class="col-12 col-lg-9 main px-3 pb-4">
+          <header class="col-12 mx-auto my-3">
+            <ul class="p-0 d-flex col-10">
+              <li class="px-3 py-2 active"><a href="#tickets">Tickets</a></li>
+              <li class="px-3 py-2"><a href="#routes">Routes</a></li>
+              <li class="px-3 py-2"><a href="#fines">Fines</a></li>
+              <li class="px-3 py-2"><a href="#new">New</a></li>
+            </ul>
+          </header>
+
+          <!-- Tickets and graph holder. -->
+          <div class="d-flex flex-wrap col-12" id="tickets">
+            <div
+              class="col-12 col-md-3 d-flex justify-content-center d-md-block p-1"
+            >
+              <div class="cont col-6 col-md-12 p-3 mx-1 mb-md-2">
+                <h2>0</h2>
+                <small class="green">tickets sold</small>
+              </div>
+              <div class="cont col-6 col-md-12 p-3 mx-1">
+                <h2>0</h2>
+                <small class="red">tickets voided</small>
+              </div>
+            </div>
+            <div class="col-12 col-md-9 p-1 px-0 px-md-2">
+              <div class="cont p-2">
+                <!-- <small class="dull">Last 7 days</small> -->
+                <div class="d-flex col-12 align-items-center">
+                  <div class="col-9">
+                    <canvas class="col-12" id="myChart"></canvas>
+                  </div>
+                  <div class="col-3">
+                    <h4 class="col-12 text-center">
+                      Total: <span style="color: limegreen">$0</span>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Route table -->
+          <h5 class="pt-5 mb-3" id="routes">Manage Routes</h5>
+          <div class="col-12 cont rt">
+            <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+              <table>
+                <tr>
+                  <th class="px-3">S/N</th>
+                  <th class="px-3" style="width: 400px">Route</th>
+                  <th class="px-3">Price</th>
+                  <th class="px-3">Monitor</th>
+                  <th class="px-3">Sold</th>
+                  <th class="px-3">Voided</th>
+                </tr>
+                <tr class="active">
+                  <td class="px-2">1</td>
+                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                  <td class="px-2">500</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td class="px-2">50</td>
+                  <td class="px-2">5</td>
+                </tr>
+                <tr>
+                  <td class="px-2">2</td>
+                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                  <td class="px-2">500</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td class="px-2">30</td>
+                  <td class="px-2">15</td>
+                </tr>
+                <tr>
+                  <td class="px-2">3</td>
+                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                  <td class="px-2">500</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td class="px-2">60</td>
+                  <td class="px-2">3</td>
+                </tr>
+                <tr>
+                  <td class="px-2">4</td>
+                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                  <td class="px-2">500</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td class="px-2">90</td>
+                  <td class="px-2">12</td>
+                </tr>
+                <tr>
+                  <td class="px-2">5</td>
+                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                  <td class="px-2">500</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td class="px-2">10</td>
+                  <td class="px-2">2</td>
+                </tr>
+                <tr>
+                  <td class="px-2">...</td>
+                  <td class="px-2" style="width: 400px">...</td>
+                  <td class="px-2">...</td>
+                  <td class="px-2">...</td>
+                  <td class="px-2">...</td>
+                  <td class="px-2">...</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- Fines Table -->
+          <h5 class="pt-5 mb-3" id="fines">Fines Collected</h5>
+          <div class="col-12 cont fn">
+            <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+              <table>
+                <tr>
+                  <th class="px-3">S/N</th>
+                  <th class="px-3">Driver</th>
+                  <th class="px-3">Route</th>
+                  <th class="px-3">Fine</th>
+                  <th class="px-3" style="width: 400px">Reason</th>
+                </tr>
+                <tr>
+                  <td class="px-2">1</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                  <td class="px-2">500</td>
+                  <td class="px-2" style="width: 400px">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing.
+                  </td>
+                </tr>
+                <tr>
+                    <td class="px-2">2</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td class="px-2" style="width: 400px">Old Lagos Abeokuta Express Road</td>
+                    <td class="px-2">900</td>
+                    <td class="px-2" style="width: 400px">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="px-2">3</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                    <td class="px-2">1000</td>
+                    <td class="px-2" style="width: 400px">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- New Requests Table -->
+          <h5 class="pt-5 mb-3" id="new">New Routes</h5>
+          <div class="col-12 cont nr">
+            <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+              <table>
+                <tr>
+                  <th class="px-1">S/N</th>
+                  <th class="px-3" style="width: 300px !important">Route</th>
+                  <th class="px-3">Price</th>
+                  <th class="px-3">Monitor</th>
+                  <th class="px-3"></th>
+                </tr>
+                <tr>
+                  <td class="px-2">1</td>
+                  <td class="px-2" style="width: 350px !important">
+                    Old Abeokuta Express Road
+                  </td>
+                  <td class="px-2">500</td>
+                  <td class="px-2">Oyedepo</td>
+                  <td
+                    class="d-flex justify-content-center py-5 py-md-3 py-lg-2"
+                    style="width: 200px !important"
+                  >
+                    <button class="btn btn-outline-success mx-1 col-5">
+                      Approve
+                    </button>
+                    <button class="btn btn-outline-danger mx-1 col-5">
+                      Decline
+                    </button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="rightsidebar col-12 col-md-6 col-lg-3">
+          <div id="route_details" class="p-3">
+            <h6>Route name*</h6>
+            <div class="d-flex">
+              <div class="col-6 p-1">
+                <div class="cont col-12 p-2">
+                  <span style="color: limegreen">Sold:</span><br />
+                  <span class="text-dark cng_txt" id="no_of_sold_tickets"
+                    ><span class="fs-3">0</span> tickets</span
+                  >
+                </div>
+              </div>
+              <div class="col-6 p-1">
+                <div class="cont col-12 p-2">
+                  <span style="color: firebrick">Voided:</span><br />
+                  <span class="text-dark cng_txt" id="no_of_void_tickets"
+                    ><span class="fs-3">0</span> tickets</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-12 p-1">
+              <div class="cont col-12 p-2">
+                <div class="d-flex col-12">
+                  <div class="col-6 p-2 cng_txt text-dark">
+                    <span class="fs-6">Penalties</span><br />
+                    <span style="color: firebrick" class="fs-5 no_of_pen">0</span>
+                  </div>
+                  <div
+                    class="col-6 p-2 cng_txt text-dark"
+                    style="border-left: 1px solid #ccc"
+                  >
+                    <span class="fs-6">Fines</span><br />
+                    <span style="color: firebrick" class="fs-5">$<span class="no_of_fin">0</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <canvas class="col-12 mt-5" id="radar_ctx"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $('*').addClass('light')
+        $("nav a").click((e) => {
+          $("nav li").removeClass("active");
+          $(e.target.parentElement).addClass("active");
+        });
+        $("header a").click((e) => {
+          $("header li").removeClass("active");
+          $(e.target.parentElement).addClass("active");
+        });
+        $(".change_theme").click(() => {
+          $("*").toggleClass("light");
+          $(".cont .cng_txt")
+            .toggleClass("text-light")
+            .toggleClass("text-dark");
+        });
+        routeDetails()
+        $(".rt td").click((e) => {
+          $("tr").removeClass("active");
+          $(e.target.parentElement).addClass("active");
+          routeDetails()
+        });
+
+        function routeDetails() {
+            $("#route_details #no_of_sold_tickets span").text($(".rt tr.active td:nth-child(5)").text());
+            $("#route_details #no_of_void_tickets span").text($(".rt tr.active td:nth-child(6)").text()); 
+            
+            var no_of_penalties = 0;
+            var index = 1;
+            var fines = 0;
+            var obj
+            var compare
+
+            do {
+              if(document.querySelector(`.fn table tr:nth-child(${index + 1}) td:nth-child(3)`).textContent == document.querySelector(".rt tr.active td:nth-child(2)").textContent){
+                no_of_penalties += 1;
+                fines += parseInt($(`.fn table tr:nth-child(${index + 1}) td:nth-child(4)`).text())
+              }
+              $(".no_of_pen").text(no_of_penalties)
+              $(".no_of_fin").text(fines)
+
+              index++;
+            } while (index < $(".fn table tr").length);
+        }
+
+        const ctx = document.getElementById("myChart").getContext("2d");
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"],
+            datasets: [
+              {
+                label: "#ticket sales in 7 days",
+                data: [12, 19, 3, 5, 2, 3, 7],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.5)",
+                  "rgba(54, 162, 235, 0.5)",
+                  "rgba(255, 206, 86, 0.5)",
+                  "rgba(75, 192, 192, 0.5)",
+                  "rgba(153, 102, 255, 0.5)",
+                  "rgba(255, 159, 64, 0.5)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                  "rgba(255, 159, 64, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            plugins: {
+              legend: {
+                labels: {
+                  // This more specific font property overrides the global property
+                  font: {
+                    family: "'Baloo 2', cursive",
+                    weight: "500",
+                    size: 13,
+                  },
+                },
+              },
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+        const radar_ctx = document.getElementById("radar_ctx").getContext("2d");
+
+        const radar = new Chart(radar_ctx, {
+          type: "radar",
+          data: {
+            labels: ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"],
+            datasets: [
+              {
+                label: "Sold",
+                data: [505, 425, 310, 236, 95, 467, 350],
+                fill: true,
+                backgroundColor: "rgba(54, 162, 235, 0.2)",
+                borderColor: "rgb(54, 162, 235)",
+                pointBackgroundColor: "rgb(54, 162, 235)",
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgb(255, 99, 132)",
+              },
+              {
+                label: "Voided",
+                data: [100, 198, 140, 119, 50, 193, 115],
+                fill: true,
+                backgroundColor: "rgba(255, 99, 132, 0.2)",
+                borderColor: "rgb(255, 99, 132)",
+                pointBackgroundColor: "rgb(255, 99, 132)",
+                pointBorderColor: "#fff",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgb(54, 162, 235)",
+              },
+            ],
+          },
+          options: {
+            elements: {
+              line: {
+                borderWidth: 3,
+              },
+            },
+          },
+        });
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
