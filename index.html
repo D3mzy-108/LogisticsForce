@@ -56,15 +56,16 @@
                     $(".input:nth-child(2)").addClass("py-3").removeClass("py-1")
                 }
             })
-            $("button[type='submit']").click(function() {
-                if ($("#username").text().toLowerCase() == "admin" && $("#password").text().toLowerCase() == "admin") {
-                    $(location).attr('href','./admin.html');
+            $("form").submit(function(e){
+                e.preventDefault()
+                var usn = document.querySelector(".input:nth-child(1) input").value
+                var psw = document.querySelector(".input:nth-child(2) input").value
+                alert("something")
+                console.log(usn);
+                console.log(psw);
+                if (usn === "admin" && psw === "admin") {
+                    window.location.replace("admin.html")
                 }else{alert("Incorrect username or password")}
-                // } else if($("#username").text().toLowerCase() == "user" && $("#password").text().toLowerCase() == "user"){
-                    
-                // } else if($("#username").text().toLowerCase() == "user" && $("#password").text().toLowerCase() == "user"){
-                    
-                // }
             })
         })
     </script>
