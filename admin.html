@@ -20,6 +20,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -35,13 +36,13 @@
   </head>
   <body>
     <div class="d-flex col-12 align-items-center">
-      <nav class="col-5 col-md-3 col-lg-2 py-3" style="height: 100vh;">
+      <nav class="col-7 col-md-3 col-lg-2 py-3" style="height: 100vh !important;">
         <div class="col-6 pb-3 px-2">
           <img src="./images/logo-removebg-preview.png" alt="Logo" class="image-fluid col-12">
         </div>
         <ul class="p-0 col-12">
-          <li class="active px-3 py-2 col-11"><a href="#">Analysis</a></li>
-          <li class="px-3 py-2 col-11"><a href="#">Drivers</a></li>
+          <li class="active px-3 py-2 col-11"><a href="#analysis">Analysis</a></li>
+          <li class="px-3 py-2 col-11"><a href="#drivers">Drivers</a></li>
           <li class="px-3 py-2 col-11"><a href="#">Reports</a></li>
           <li class="px-3 py-2 col-11"><a href="#">Staff</a></li>
           <li
@@ -53,242 +54,323 @@
               <span class="slider round change_theme"></span>
             </label>
           </li>
+          <li>
+            <a href="#" class="px-3 py-2 d-flex justify-content-between align-items-center">
+              <span>Edit Information</span> <i class="fa fa-pencil"></i>
+            </a>
+          </li>
         </ul>
       </nav>
 
       <!-- ANALYSIS -->
-      <main class="col-12 col-md-9 col-lg-10 d-flex" id="analysis">
-        <div class="col-12 col-lg-9 main px-3 pb-4">
-          <header class="col-12 mx-auto my-3">
-            <ul class="p-0 d-flex col-10">
-              <li class="px-3 py-2 active"><a href="#tickets">Tickets</a></li>
-              <li class="px-3 py-2"><a href="#routes">Routes</a></li>
-              <li class="px-3 py-2"><a href="#fines">Fines</a></li>
-              <li class="px-3 py-2"><a href="#new">New</a></li>
-            </ul>
-          </header>
-
-          <!-- Tickets and graph holder. -->
-          <div class="d-flex flex-wrap col-12" id="tickets">
-            <div
-              class="col-12 col-md-3 d-flex justify-content-center d-md-block p-1"
-            >
-              <div class="cont col-6 col-md-12 p-3 mx-1 mb-md-2">
-                <h2>0</h2>
-                <small class="green">tickets sold</small>
+      <div class="col-12 col-md-9 col-lg-10" style="height: 100vh; overflow-y: hidden;">
+        <main class="col-12 d-flex" id="analysis">
+          <div class="col-12 col-lg-9 main px-3 pb-4" id="analysis_content">
+            <header class="col-12 mx-auto my-3">
+              <ul class="p-0 d-flex col-10">
+                <li class="px-2 py-1 px-md-3 py-md-2 active"><a href="#tickets">Tickets</a></li>
+                <li class="px-2 py-1 px-md-3 py-md-2"><a href="#routes">Routes</a></li>
+                <li class="px-2 py-1 px-md-3 py-md-2"><a href="#">Fines</a></li>
+                <li class="px-2 py-1 px-md-3 py-md-2"><a href="#">New</a></li>
+              </ul>
+            </header>
+  
+            <!-- Tickets and graph holder. -->
+            <div class="d-flex flex-wrap col-12" id="tickets">
+              <div
+                class="col-12 col-md-3 d-flex justify-content-center d-md-block p-1"
+              >
+                <div class="cont col-6 col-md-12 p-3 mx-1 mb-md-2">
+                  <h2>0</h2>
+                  <small class="green">tickets sold</small>
+                </div>
+                <div class="cont col-6 col-md-12 p-3 mx-1">
+                  <h2>0</h2>
+                  <small class="red">tickets voided</small>
+                </div>
               </div>
-              <div class="cont col-6 col-md-12 p-3 mx-1">
-                <h2>0</h2>
-                <small class="red">tickets voided</small>
-              </div>
-            </div>
-            <div class="col-12 col-md-9 p-1 px-0 px-md-2">
-              <div class="cont p-2">
-                <!-- <small class="dull">Last 7 days</small> -->
-                <div class="d-flex col-12 align-items-center">
-                  <div class="col-9">
-                    <canvas class="col-12" id="myChart"></canvas>
-                  </div>
-                  <div class="col-3">
-                    <h4 class="col-12 text-center">
-                      Total: <span style="color: limegreen">$0</span>
-                    </h4>
+              <div class="col-12 col-md-9 p-1 px-0 px-md-2">
+                <div class="cont p-2">
+                  <!-- <small class="dull">Last 7 days</small> -->
+                  <div class="d-flex col-12 align-items-center">
+                    <div class="col-9">
+                      <canvas class="col-12" id="myChart"></canvas>
+                    </div>
+                    <div class="col-3">
+                      <h4 class="col-12 text-center">
+                        Total: <span style="color: limegreen">$0</span>
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Route table -->
-          <h5 class="pt-5 mb-3" id="routes">Manage Routes</h5>
-          <div class="col-12 cont rt">
-            <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
-              <table>
-                <tr>
-                  <th class="px-3">S/N</th>
-                  <th class="px-3" style="width: 400px">Route</th>
-                  <th class="px-3">Price</th>
-                  <th class="px-3">Monitor</th>
-                  <th class="px-3">Sold</th>
-                  <th class="px-3">Voided</th>
-                </tr>
-                <tr class="active">
-                  <td class="px-2">1</td>
-                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                  <td class="px-2">500</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td class="px-2">50</td>
-                  <td class="px-2">5</td>
-                </tr>
-                <tr>
-                  <td class="px-2">2</td>
-                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                  <td class="px-2">500</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td class="px-2">30</td>
-                  <td class="px-2">15</td>
-                </tr>
-                <tr>
-                  <td class="px-2">3</td>
-                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                  <td class="px-2">500</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td class="px-2">60</td>
-                  <td class="px-2">3</td>
-                </tr>
-                <tr>
-                  <td class="px-2">4</td>
-                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                  <td class="px-2">500</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td class="px-2">90</td>
-                  <td class="px-2">12</td>
-                </tr>
-                <tr>
-                  <td class="px-2">5</td>
-                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                  <td class="px-2">500</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td class="px-2">10</td>
-                  <td class="px-2">2</td>
-                </tr>
-                <tr>
-                  <td class="px-2">...</td>
-                  <td class="px-2" style="width: 400px">...</td>
-                  <td class="px-2">...</td>
-                  <td class="px-2">...</td>
-                  <td class="px-2">...</td>
-                  <td class="px-2">...</td>
-                </tr>
-              </table>
+  
+            <!-- Route table -->
+            <div class="d-flex justify-content-between col-12 align-items-end">
+              <h5 class="pt-5 mb-3" id="routes">Manage Routes</h5>
+              <div class="d-flex col-4">
+                <i class="fa fa-search col-2 text-end pt-1 px-1"></i>
+                <input type="search" name="" placeholder="Type search here..." style="height: fit-content; border: none; outline: none; background: none;" class="col-10 mb-3">
+              </div>
             </div>
-          </div>
-
-          <!-- Fines Table -->
-          <h5 class="pt-5 mb-3" id="fines">Fines Collected</h5>
-          <div class="col-12 cont fn">
-            <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
-              <table>
-                <tr>
-                  <th class="px-3">S/N</th>
-                  <th class="px-3">Driver</th>
-                  <th class="px-3">Route</th>
-                  <th class="px-3">Fine</th>
-                  <th class="px-3" style="width: 400px">Reason</th>
-                </tr>
-                <tr>
-                  <td class="px-2">1</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                  <td class="px-2">500</td>
-                  <td class="px-2" style="width: 400px">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing.
-                  </td>
-                </tr>
-                <tr>
-                    <td class="px-2">2</td>
+            <div class="col-12 cont rt">
+              <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+                <table>
+                  <tr>
+                    <th class="px-3">S/N</th>
+                    <th class="px-3" style="width: 400px">Route</th>
+                    <th class="px-3">Price</th>
+                    <th class="px-3">Monitor</th>
+                    <th class="px-3">Sold</th>
+                    <th class="px-3">Voided</th>
+                  </tr>
+                  <tr class="active">
+                    <td class="px-2">1</td>
+                    <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                    <td class="px-2">500</td>
                     <td class="px-2">Oyedepo</td>
+                    <td class="px-2">50</td>
+                    <td class="px-2">5</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">2</td>
                     <td class="px-2" style="width: 400px">Old Lagos Abeokuta Express Road</td>
-                    <td class="px-2">900</td>
-                    <td class="px-2" style="width: 400px">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing.
-                    </td>
-                </tr>
-                <tr>
+                    <td class="px-2">500</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td class="px-2">30</td>
+                    <td class="px-2">15</td>
+                  </tr>
+                  <tr>
                     <td class="px-2">3</td>
+                    <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                    <td class="px-2">500</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td class="px-2">60</td>
+                    <td class="px-2">3</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">4</td>
+                    <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                    <td class="px-2">500</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td class="px-2">90</td>
+                    <td class="px-2">12</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">5</td>
+                    <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                    <td class="px-2">500</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td class="px-2">10</td>
+                    <td class="px-2">2</td>
+                  </tr>
+                  <tr>
+                    <td class="px-2">...</td>
+                    <td class="px-2" style="width: 400px">...</td>
+                    <td class="px-2">...</td>
+                    <td class="px-2">...</td>
+                    <td class="px-2">...</td>
+                    <td class="px-2">...</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+  
+            <!-- Fines Table -->
+            <div class="d-flex justify-content-between col-12 align-items-end">
+              <h5 class="pt-5 mb-3" id="fines">Fines Collected</h5>
+              <div class="d-flex col-4">
+                <i class="fa fa-search col-2 text-end pt-1 px-1"></i>
+                <input type="search" name="" placeholder="Type search here..." style="height: fit-content; border: none; outline: none; background: none;" class="col-10 mb-3">
+              </div>
+            </div>
+            <div class="col-12 cont fn">
+              <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+                <table>
+                  <tr>
+                    <th class="px-3">S/N</th>
+                    <th class="px-3">Driver</th>
+                    <th class="px-3">Route</th>
+                    <th class="px-3">Fine</th>
+                    <th class="px-3" style="width: 400px">Reason</th>
+                  </tr>
+                  <tr>
+                    <td class="px-2">1</td>
                     <td class="px-2">Oyedepo</td>
                     <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
-                    <td class="px-2">1000</td>
+                    <td class="px-2">500</td>
                     <td class="px-2" style="width: 400px">
                       Lorem ipsum dolor sit amet, consectetur adipisicing.
                     </td>
-                </tr>
-              </table>
+                  </tr>
+                  <tr>
+                      <td class="px-2">2</td>
+                      <td class="px-2">Oyedepo</td>
+                      <td class="px-2" style="width: 400px">Old Lagos Abeokuta Express Road</td>
+                      <td class="px-2">900</td>
+                      <td class="px-2" style="width: 400px">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="px-2">3</td>
+                      <td class="px-2">Oyedepo</td>
+                      <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
+                      <td class="px-2">1000</td>
+                      <td class="px-2" style="width: 400px">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                      </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+  
+            <!-- New Requests Table -->
+            <div class="d-flex justify-content-between col-12 align-items-end">
+              <h5 class="pt-5 mb-3" id="new">New Routes</h5>
+              <div class="d-flex col-4">
+                <i class="fa fa-search col-2 text-end pt-1 px-1"></i>
+                <input type="search" name="" placeholder="Type search here..." style="height: fit-content; border: none; outline: none; background: none;" class="col-10 mb-3">
+              </div>
+            </div>
+            <div class="col-12 cont nr">
+              <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+                <table>
+                  <tr>
+                    <th class="px-1">S/N</th>
+                    <th class="px-3" style="width: 300px !important">Route</th>
+                    <th class="px-3">Price</th>
+                    <th class="px-3">Monitor</th>
+                    <th class="px-3"></th>
+                  </tr>
+                  <tr>
+                    <td class="px-2">1</td>
+                    <td class="px-2" style="width: 350px !important">
+                      Old Abeokuta Express Road
+                    </td>
+                    <td class="px-2">500</td>
+                    <td class="px-2">Oyedepo</td>
+                    <td
+                      class="d-flex justify-content-center py-5 py-md-3 py-lg-2"
+                      style="width: 200px !important"
+                    >
+                      <button class="btn btn-outline-success mx-1 col-5">
+                        Approve
+                      </button>
+                      <button class="btn btn-outline-danger mx-1 col-5">
+                        Decline
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
+          <div class="rightsidebar col-12 col-lg-3">
+            <div id="route_details" class="p-3">
+              <div class="d-flex align-items-center">
+                <a href="#analysis_content">
+                  <i class="fa fa-angle-left fa-2x pb-3"></i>
+                </a>
+                <h6 class="mx-3">Route name*</h6>
+              </div>
+              <div class="d-flex">
+                <div class="col-6 p-1">
+                  <div class="cont col-12 p-2">
+                    <span style="color: limegreen">Sold:</span><br />
+                    <span class="text-dark cng_txt" id="no_of_sold_tickets"
+                      ><span class="fs-3">0</span> tickets</span
+                    >
+                  </div>
+                </div>
+                <div class="col-6 p-1">
+                  <div class="cont col-12 p-2">
+                    <span style="color: firebrick">Voided:</span><br />
+                    <span class="text-dark cng_txt" id="no_of_void_tickets"
+                      ><span class="fs-3">0</span> tickets</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 p-1">
+                <div class="cont col-12 p-2">
+                  <div class="d-flex col-12">
+                    <div class="col-6 p-2 cng_txt text-dark">
+                      <span class="fs-6">Penalties</span><br />
+                      <span style="color: firebrick" class="fs-5 no_of_pen">0</span>
+                    </div>
+                    <div
+                      class="col-6 p-2 cng_txt text-dark"
+                      style="border-left: 1px solid #ccc"
+                    >
+                      <span class="fs-6">Fines</span><br />
+                      <span style="color: firebrick" class="fs-5">$<span class="no_of_fin">0</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <canvas class="col-12 mt-5" id="radar_ctx"></canvas>
+            </div>
+          </div>
+        </main>
+  
+  
+        <!-- DRIVERS -->
+        <main class="col-12 d-flex" id="drivers">
+          <div class="col-12 col-lg-9 main px-3 pb-4">
+            <header class="col-12 mx-auto my-3">
+              <ul class="p-0 d-flex col-10">
+                <li class="px-3 py-2 active"><a href="#">Tickets</a></li>
+                <li class="px-3 py-2"><a href="#">Routes</a></li>
+                <li class="px-3 py-2"><a href="#">Fines</a></li>
+                <li class="px-3 py-2"><a href="#">New</a></li>
+              </ul>
+            </header>
+            <div class="d-flex col-12">
+              <div class="col-6 p-2">
+                <div class="cont col-12 p-3">
+                  <h3>0</h3>
+                  <p>drivers registered</p>
+                </div>
+              </div>
+              <div class="col-6 p-2">
+                <div class="cont col-12 p-3">
+                  <h3>0</h3>
+                  <p>vehicles registered</p>
+                </div>
+              </div>
+            </div>
 
-          <!-- New Requests Table -->
-          <h5 class="pt-5 mb-3" id="new">New Routes</h5>
-          <div class="col-12 cont nr">
-            <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
-              <table>
-                <tr>
-                  <th class="px-1">S/N</th>
-                  <th class="px-3" style="width: 300px !important">Route</th>
-                  <th class="px-3">Price</th>
-                  <th class="px-3">Monitor</th>
-                  <th class="px-3"></th>
-                </tr>
-                <tr>
-                  <td class="px-2">1</td>
-                  <td class="px-2" style="width: 350px !important">
-                    Old Abeokuta Express Road
-                  </td>
-                  <td class="px-2">500</td>
-                  <td class="px-2">Oyedepo</td>
-                  <td
-                    class="d-flex justify-content-center py-5 py-md-3 py-lg-2"
-                    style="width: 200px !important"
-                  >
-                    <button class="btn btn-outline-success mx-1 col-5">
-                      Approve
-                    </button>
-                    <button class="btn btn-outline-danger mx-1 col-5">
-                      Decline
-                    </button>
-                  </td>
-                </tr>
-              </table>
+
+            <!-- List of drivers -->
+            <div class="d-flex justify-content-between col-12 align-items-end">
+              <h5 class="pt-5 mb-3" id="dri">Drivers</h5>
+              <div class="d-flex col-4">
+                <i class="fa fa-search col-2 text-end pt-1 px-1"></i>
+                <input type="search" name="" placeholder="Type search here..." style="height: fit-content; border: none; outline: none; background: none;" class="col-10 mb-3">
+              </div>
+            </div>
+  
+          </div>
+          <div class="rightsidebar col-12 col-lg-3">
+            <div id="_details" class="p-3">
+              
             </div>
           </div>
-        </div>
-        <div class="rightsidebar col-12 col-md-6 col-lg-3">
-          <div id="route_details" class="p-3">
-            <h6>Route name*</h6>
-            <div class="d-flex">
-              <div class="col-6 p-1">
-                <div class="cont col-12 p-2">
-                  <span style="color: limegreen">Sold:</span><br />
-                  <span class="text-dark cng_txt" id="no_of_sold_tickets"
-                    ><span class="fs-3">0</span> tickets</span
-                  >
-                </div>
-              </div>
-              <div class="col-6 p-1">
-                <div class="cont col-12 p-2">
-                  <span style="color: firebrick">Voided:</span><br />
-                  <span class="text-dark cng_txt" id="no_of_void_tickets"
-                    ><span class="fs-3">0</span> tickets</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-12 p-1">
-              <div class="cont col-12 p-2">
-                <div class="d-flex col-12">
-                  <div class="col-6 p-2 cng_txt text-dark">
-                    <span class="fs-6">Penalties</span><br />
-                    <span style="color: firebrick" class="fs-5 no_of_pen">0</span>
-                  </div>
-                  <div
-                    class="col-6 p-2 cng_txt text-dark"
-                    style="border-left: 1px solid #ccc"
-                  >
-                    <span class="fs-6">Fines</span><br />
-                    <span style="color: firebrick" class="fs-5">$<span class="no_of_fin">0</span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <canvas class="col-12 mt-5" id="radar_ctx"></canvas>
-          </div>
-        </div>
-      </main>
+        </main>
+
+      </div>
     </div>
+
+    <button class="cont d-flex d-md-none align-items-center justify-content-center" id="menubtn"><i class="fa fa-bars"></i></button>
 
     <script>
       $(document).ready(function () {
         $('*').addClass('light')
+        $("#menubtn").click(() => {
+          $("nav").toggleClass("active")
+        })
         $("nav a").click((e) => {
           $("nav li").removeClass("active");
           $(e.target.parentElement).addClass("active");
@@ -308,6 +390,7 @@
           $("tr").removeClass("active");
           $(e.target.parentElement).addClass("active");
           routeDetails()
+          window.location.replace("admin.html#route_details")
         });
 
         function routeDetails() {
