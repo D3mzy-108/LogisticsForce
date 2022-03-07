@@ -20,7 +20,7 @@
     
     <div class="d-flex col-12 align-items-center">
       
-      <nav class="col-7 col-md-3 col-lg-2 py-3" style="height: 100vh;">
+      <!-- <nav class="col-7 col-md-3 col-lg-2 py-3" style="height: 100vh;">
         <div class="col-6 pb-3 px-2">
           <img src="./images/logo-removebg-preview.png" alt="Logo" class="image-fluid col-12">
         </div>
@@ -39,81 +39,111 @@
             </label>
           </li>
         </ul>
-      </nav>
+      </nav> -->
 
       <!-- ANALYSIS -->
-      <main class="col-12 col-md-9 col-lg-10 d-flex" id="analysis">
+      <!-- <main class="col-12 col-md-9 col-lg-10 d-flex" id="analysis"> -->
+      <main class="col-12 d-flex" id="analysis">
 
-        <div class="col-12 col-lg-8 col-md-12 main px-3 pb-4" id="content">
-          <div class="personal-info">
-                <div class="rounded-circle mx-auto user-image">
-                <img src="/images/placeholder.jpg" class="img-fluid rounded-circle alt=">                
-            </div>
-            <p class="text-center py-2 h4">Username</p>
-            </div>
-            <h5 class="fw-bold">Vehicles: </h5>
-
-            <div class="container dig px-2 py-2 mt-4" style="overflow-x: scroll;">
-                <div class="row gx-4" style="width: 1000px;">
-                    <div class="col" >
-                        <div class="p-3 vehicles cont">
-                            <p>Plate No:</p>
-                            <h3 class="plate-no">ARE - 33 - 8WQ</h3>
-                            <p>Type: 17 seater</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="p-3 vehicles cont">
-                            <p>Plate No:</p>
-                            <h3 class="plate-no">ARE - 33 - 8WQ</h3>
-                            <p>Type: 17 seater</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="p-3 vehicles cont">
-                            <p>Plate No:</p>
-                            <h3 class="plate-no">ARE - 33 - 8WQ</h3>
-                            <p>Type: 17 seater</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="p-3 vehicles cont">
-                            <p>Plate No:</p>
-                            <h3 class="plate-no">ARE - 33 - 8WQ</h3>
-                            <p>Type: 17 seater</p>
-                        </div>
-                    </div>
-                    
+        <!-- <div class="col-12 col-lg-8 col-md-12 main px-3 pb-4" id="content"> -->
+        <div class="col-12 col-lg-9 px-3 py-3 main" id="content">
+            <header class="col-12">
+                <ul class="px-0 mx-0 row">
+                    <li class="col text-center py-2 active"><a href="#home" id="homeLink">Home</a></li>
+                    <li class="col text-center py-2"><a href="#report" id="reportLink">Report</a></li>
+                    <li class="col text-center py-2"><a href="#me" id="meLink">Me</a></li>
+                    <li class="col-2 col-md-1 text-center py-2 change_theme" style="cursor: pointer;"><i class="fa fa-moon-o px-2"></i></li>
+                </ul>
+            </header>
+            <div class="d-flex col-12" style="overflow-x: hidden;">
+                <div id="home" class="col-12 py-4">
+                    <p>This is home</p>
                 </div>
-            </div>
-
-            <div class="action-btns mt-4 ">
-                <button class="btn btn-success" id="addVehicle" onclick="toggleRightSideBar()">Add Vehicle</button>
-                <button class="btn btn-danger" id="removeVehicle">Remove Vehicle</button>
-            </div>
-
-            <div class="vstack gap-3 mt-5 row px-0 mx-0">
-                <a href="#" class="col-12 col-md py-2 cont">
-                    <div>
-                        <p><i class='fa fa-sign-out'></i> Logout  </p>
+                <div id="report" class="col-12 py-4">
+                    <p>This is report</p>
+                </div>
+              <div id="me" class="col-12 py-4">
+                <div class="personal-info">
+                    <div class="rounded-circle mx-auto user-image">
+                    <img src="/images/placeholder.jpg" class="img-fluid rounded-circle alt=">                
+                </div>
+                <p class="text-center py-2 h4">Username</p>
+                </div>
+                <h5 class="fw-bold">Vehicles: </h5>
+    
+                <div class="container dig px-2 py-2 mt-2" style="overflow-x: scroll;">
+                    <div class="row gx-4" style="width: 1000px;">
+                        <div class="col" >
+                            <div class="p-3 vehicles cont">
+                                <p>Plate No:</p>
+                                <h3 class="plate-no">ARE - 33 - 8WQ</h3>
+                                <p>Type: 17 seater</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 vehicles cont">
+                                <p>Plate No:</p>
+                                <h3 class="plate-no">ARE - 33 - 8WQ</h3>
+                                <p>Type: 17 seater</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 vehicles cont">
+                                <p>Plate No:</p>
+                                <h3 class="plate-no">ARE - 33 - 8WQ</h3>
+                                <p>Type: 17 seater</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="p-3 vehicles cont">
+                                <p>Plate No:</p>
+                                <h3 class="plate-no">ARE - 33 - 8WQ</h3>
+                                <p>Type: 17 seater</p>
+                            </div>
+                        </div>
+                        
                     </div>
-                </a>
-                <a href="#" class="col-12 col-md py-2 cont my-2 my-md-0">
-                    <div>
-                        <p><i class='fa fa-question-circle-o' ></i> Help </p>
-                    </div>
-                </a>
-                <a href="#" class="col-12 col-md py-2 cont">
-                    <div>
-                        <p><i class='fa fa-info-circle'></i> Missing Vehicle </p>
-                    </div>
-                </a>
+                </div>
+    
+                <div class="action-btns mt-4 ">
+                    <button class="btn btn-success" id="addVehicle" onclick="toggleRightSideBar()">Add Vehicle</button>
+                    <button class="btn btn-danger" id="removeVehicle">Remove Vehicle</button>
+                </div>
+    
+                <div class="vstack gap-3 mt-5 row px-0 mx-0">
+                    <a href="#" class="col-12 col-md py-2 cont">
+                        <div>
+                            <p><i class='fa fa-sign-out'></i> Logout  </p>
+                        </div>
+                    </a>
+                    <a href="#" class="col-12 col-md py-2 cont my-2 my-md-0">
+                        <div>
+                            <p><i class='fa fa-question-circle-o' ></i> Help </p>
+                        </div>
+                    </a>
+                    <a href="#" class="col-12 col-md py-2 cont">
+                        <div>
+                            <p><i class='fa fa-info-circle'></i> Missing Vehicle </p>
+                        </div>
+                    </a>
+                </div>
+              </div>
             </div>
         </div>
 
-        <div class="rightsidebar col-12 col-lg-4" id="rightsidebar">
-            <a href="user.html#content"><i class="fa fa-angle-left fa-2x p-3"></i></a>
-          <div class="p-2">
+        <div class="rightsidebar col-12 col-lg-3" id="rightsidebar">
+          <div class="p-2" id="homeSideBar">
+            <a href="user.html#content"><i class="fa fa-angle-left fa-2x p-3 d-block d-lg-none"></i></a>
+          </div>
+          
+          
+          <div class="p-2" id="reportSideBar">
+            <a href="user.html#content"><i class="fa fa-angle-left fa-2x p-3 d-block d-lg-none"></i></a>
+          </div>
+
+
+          <div class="p-2" id="meSideBar">
+            <a href="user.html#content"><i class="fa fa-angle-left fa-2x p-3 d-block d-lg-none"></i></a>
             <form action="">
                 <div class="upload-info">
                     <div class="rounded-circle mx-auto upload-image">
@@ -147,9 +177,28 @@
       
     </div>
 
-    <button class="cont d-flex d-md-none align-items-center justify-content-center" id="menubtn"><i class="fa fa-bars"></i></button>
+    <!-- <button class="cont d-flex d-md-none align-items-center justify-content-center" id="menubtn"><i class="fa fa-bars"></i></button> -->
     
 
+    <script>
+        $(document).ready(() => {
+            $("#homeLink").click(() => {
+                $("#homeSideBar").css("display", "block")
+                $("#reportSideBar").css("display", "none")
+                $("#meSideBar").css("display", "none")
+            })
+            $("#reportLink").click(() => {
+                $("#reportSideBar").css("display", "block")
+                $("#homeSideBar").css("display", "none")
+                $("#meSideBar").css("display", "none")
+            })
+            $("#meLink").click(() => {
+                $("#meSideBar").css("display", "block")
+                $("#reportSideBar").css("display", "none")
+                $("#homeSideBar").css("display", "none")
+            })
+        })
+    </script>
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>

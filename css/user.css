@@ -55,6 +55,17 @@ p, small{
     font-family: 'Baloo 2', cursive; 
     font-size: 15px;
     border-radius: 5px; 
+    background: none;
+    color: white;
+}
+.vehicle-upload-info .select-form.light{
+    color: #222;
+}
+.vehicle-upload-info .select-form option{
+    background: #292c59 !important;
+}
+.vehicle-upload-info .select-form option.light{
+    background: white !important;
 }
 .vehicle-upload-info .select-form:focus{
     border: 2px solid transparent;
@@ -66,8 +77,44 @@ p, small{
     background-color: white;
     border: 2px solid #4b7f8a;
     padding: 5px 0;
-    border-radius: 7px;    
+    border-radius: 7px;
+}
+.vehicle-upload-info{
+    color: white;
+}
+.vehicle-upload-info input{
+    background: none;
+}
+.vehicle-upload-info.light{
+    color: #222;
 }
 .vehicle-upload-info #plateNo{
     text-transform: uppercase;
+}
+
+#content{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+#home, #me, #report{
+    height: 89vh;
+    overflow-y: scroll;
+}
+
+#home::-webkit-scrollbar, #me::-webkit-scrollbar, #report::-webkit-scrollbar{
+    width: 0 !important;
+}
+
+.rightsidebar{
+    overflow-y: hidden;
+}
+
+#homeSideBar{
+    display: block;
+}
+#reportSideBar, #meSideBar{
+    height: 100vh;
+    overflow-y: scroll;
+    display: none;
 }

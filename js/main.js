@@ -2,6 +2,7 @@ $(document).ready(function () {
         $('*').addClass('light')
         $("#menubtn").click(() => {
           $("nav").toggleClass("active")
+          $("#menubtn i").toggleClass("fa-bars").toggleClass("fa-close")
         })
         $("nav a").click((e) => {
           $("nav li").removeClass("active");
