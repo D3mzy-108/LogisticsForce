@@ -121,7 +121,7 @@ p, small{
 
 @media screen and (max-width: 767px) {
     header{
-        position: fixed;
+        position: absolute !important;
         top: 2vh;
     }
 }
