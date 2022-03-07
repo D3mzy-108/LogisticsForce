@@ -160,5 +160,4 @@ $(document).ready(function () {
 
       function toggleRightSideBar(params) {
         window.location.replace("user.html#rightsidebar")
-        console.log("Clicked");
       }
