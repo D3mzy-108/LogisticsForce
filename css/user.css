@@ -98,7 +98,7 @@ p, small{
 }
 
 #home, #me, #report{
-    height: 85vh;
+    height: 95vh;
     overflow-y: scroll;
 }
 
@@ -121,16 +121,25 @@ p, small{
 .space{
     height: 2vh;
 }
+header ul li.actv {
+    font-weight: 600;
+    border-bottom: 3px solid var(--active_nav_light);
+    background: var(--active_nav);
+}
+header ul li.actv.light{
+    border-bottom: 3px solid var(--border_left_light);
+    background: var(--active_nav_light);
+}
 
 @media screen and (max-width: 767px) {
     /* header{
         position: absolute !important;
         top: 2vh;
     } */
-    #content{
+    /* #content{
         height: 90vh;
     }
     #home, #me, #report{
         height: 75vh;
-    }
+    } */
 }
