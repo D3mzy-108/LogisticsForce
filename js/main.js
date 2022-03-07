@@ -82,7 +82,7 @@ $(document).ready(function () {
                 labels: {
                   // This more specific font property overrides the global property
                   font: {
-                    family: "'Baloo 2', cursive",
+                    family: "sans-serif",
                     weight: "500",
                     size: 10,
                   },
