@@ -181,16 +181,3 @@ small{
 small.light{
     color: var(--txt_clr_light);
 }
-
-@media screen and (max-width: 767px) {
-    /* header{
-        position: absolute !important;
-        top: 2vh;
-    } */
-    /* #content{
-        height: 90vh;
-    }
-    #home, #me, #report{
-        height: 75vh;
-    } */
-}
