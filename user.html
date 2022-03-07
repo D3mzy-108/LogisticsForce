@@ -70,42 +70,42 @@
                     <p class="py-3 fs-5">Your tickets:</p>
 
                     <div class="row m-0 p-0">
-                        <div class="col-6 col-md-4 p-2">
+                        <div class="col-12 col-md-4 p-2">
                             <div class="cont col-12 p-3">
                                 <h5>Route name*</h5>
                                 <p><b>id: Random_ticket_id</b></p>
                                 <p>Expiry Date: 2022-03-08 16:50GMT</p>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 p-2">
+                        <div class="col-12 col-md-4 p-2">
                             <div class="cont col-12 p-3">
                                 <h5>Route name*</h5>
                                 <p><b>id: Random_ticket_id</b></p>
                                 <p>Expiry Date: 2022-03-08 16:50GMT</p>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 p-2">
+                        <div class="col-12 col-md-4 p-2">
                             <div class="cont col-12 p-3">
                                 <h5>Route name*</h5>
                                 <p><b>id: Random_ticket_id</b></p>
                                 <p>Expiry Date: 2022-03-08 16:50GMT</p>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 p-2">
+                        <div class="col-12 col-md-4 p-2">
                             <div class="cont col-12 p-3">
                                 <h5>Route name*</h5>
                                 <p><b>id: Random_ticket_id</b></p>
                                 <p>Expiry Date: 2022-03-08 16:50GMT</p>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 p-2">
+                        <div class="col-12 col-md-4 p-2">
                             <div class="cont col-12 p-3">
                                 <h5>Route name*</h5>
                                 <p><b>id: Random_ticket_id</b></p>
                                 <p>Expiry Date: 2022-03-08 16:50GMT</p>
                             </div>
                         </div>
-                        <div class="col-6 col-md-4 p-2">
+                        <div class="col-12 col-md-4 p-2">
                             <div class="cont col-12 p-3">
                                 <h5>Route name*</h5>
                                 <p><b>id: Random_ticket_id</b></p>
@@ -124,7 +124,60 @@
                         </ul>
                     </header>
 
-                    <p>This is report</p>
+                    <div class="d-flex flex-wrap col-12 align-items-center">
+                        <div class="col-12 col-md-6 p-2">
+                            <h4 class="text-center">Be it a system bug or a stolen vehicle, please report any inconviniences here and we will surely be on the case.</h4>
+                        </div>
+                        <div class="col-12 col-md-6 p-2">
+                            <div class="cont p-3">
+                                <form action="">
+                                    <div class="upload-info">
+                                        <div class="rounded-circle mx-auto upload-image d-flex align-items-center justify-content-center bg-light">
+                                            <i class="fa fa-bug fa-5x"></i>
+                                        </div>
+                    
+                                        <div class="vehicle-upload-info p-3 mx-auto mt-3">
+                                            <div class="d-flex mb-3">
+                                                <label for="report_type" class="mt-1 col-3" >Type: </label>
+                                                <select class="ms-3 select-form " id="report_type" >
+                                                    <option value="husker">Software issue</option>
+                                                    <option value="starbuck">Missing vehicle</option>
+                                                    <option value="hotdog">Misbehaving staff</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- SOFTWARE REPORT FORM -->
+                                            <div id="softwareIssue" class="col-12 flex-wrap justify-content-center">
+                                                <div class="d-flex mb-3 col-12">
+                                                    <label for="software_issue" class="mt-1 col-3" >Issue: </label>
+                                                    <textarea name="" class="ms-3 col-8" id="software_issue" rows="5" placeholder="type here..."></textarea>
+                                                </div>
+                                                <button type="submit" class="mt-3">Add Vehicle</button>
+                                            </div>
+                                            
+                                            <!-- MISSING VEHICLE REPORT FORM -->
+                                            <div id="missingVehicle" class="col-12 flex-wrap justify-content-center">
+                                                <div class="d-flex mb-3 col-12">
+                                                    <label for="vehicle_descr" class="mt-1 col-3" >Description: </label>
+                                                    <textarea name="" class="ms-3 col-8" id="vehicle_descr" rows="5" placeholder="plate-no, color, brand, number of seats..."></textarea>
+                                                </div>
+                                                <button type="submit" class="mt-3">Add Vehicle</button>
+                                            </div>
+
+                                            <!-- MISBEHAVING AGENT REPORT FORM -->
+                                            <div id="agentIssue" class="col-12 flex-wrap justify-content-center">
+                                                <div class="d-flex mb-3 col-12">
+                                                    <label for="agent_issue" class="mt-1 col-3" >Issue: </label>
+                                                    <textarea name="" class="ms-3 col-8" id="agent_issue" rows="5" placeholder="type here..."></textarea>
+                                                </div>
+                                                <button type="submit" class="mt-3">Add Vehicle</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               <div id="me" class="col-12 py-3">
                 <header class="col-12 mx-auto">
@@ -238,7 +291,29 @@
           
           
           <div class="p-2" id="reportSideBar">
-            <a href="user.html#content"><i class="fa fa-angle-left fa-2x p-3 d-block d-lg-none"></i></a>
+            <a href="user.html#content"><i class="fa fa-angle-left fa-2x p-3 d-block d-lg-none"> Notifications</i></a>
+            <div class="px-3">
+                <div class="cont p-3 mt-2">
+                    <h6>Route Admin Name*</h6>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem quam ut dolorum. Sit, veniam.</small>
+                </div>
+                <div class="cont p-3 mt-2">
+                    <h6>Route Admin Name*</h6>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem quam ut dolorum. Sit, veniam.</small>
+                </div>
+                <div class="cont p-3 mt-2">
+                    <h6>Route Admin Name*</h6>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem quam ut dolorum. Sit, veniam.</small>
+                </div>
+                <div class="cont p-3 mt-2">
+                    <h6>Route Admin Name*</h6>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem quam ut dolorum. Sit, veniam.</small>
+                </div>
+                <div class="cont p-3 mt-2">
+                    <h6>Route Admin Name*</h6>
+                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem quam ut dolorum. Sit, veniam.</small>
+                </div>
+            </div>
           </div>
 
 
@@ -277,8 +352,7 @@
       
     </div>
 
-    <!-- <button class="cont d-flex d-md-none align-items-center justify-content-center" id="menubtn"><i class="fa fa-bars"></i></button> -->
-    
+    <button onclick="toggleRightSideBar()" class="cont align-items-center justify-content-center" id="notifbtn"><i class="fa fa-bell"></i></button>
 
     <script>
         $(document).ready(() => {
@@ -286,20 +360,38 @@
                 $("#homeSideBar").css("display", "block")
                 $("#reportSideBar").css("display", "none")
                 $("#meSideBar").css("display", "none")
+                $("#notifbtn").css("display","none")
             })
             $(".reportLink").click(() => {
                 $("#reportSideBar").css("display", "block")
                 $("#homeSideBar").css("display", "none")
                 $("#meSideBar").css("display", "none")
+                $("#notifbtn").css("display","flex")
             })
             $(".meLink").click(() => {
                 $("#meSideBar").css("display", "block")
                 $("#reportSideBar").css("display", "none")
                 $("#homeSideBar").css("display", "none")
+                $("#notifbtn").css("display","none")
             })
             $(".change_theme").click(() => {
                 $(".change_theme i").toggleClass("fa-moon-o").toggleClass("fa-sun-o text-warning")
                 $("#buyTicketBtn").toggleClass("btn-outline-dark").toggleClass("btn-outline-light")
+            })
+            $("#report_type").click(() => {
+                if($("#report_type").find(":selected").text() == "Software issue"){
+                    $("#softwareIssue").css("display","flex")
+                    $("#missingVehicle").css("display","none")
+                    $("#agentIssue").css("display","none")
+                }else if($("#report_type").find(":selected").text() == "Missing vehicle"){
+                    $("#softwareIssue").css("display","none")
+                    $("#missingVehicle").css("display","flex")
+                    $("#agentIssue").css("display","none")
+                }else if($("#report_type").find(":selected").text() == "Misbehaving staff"){
+                    $("#softwareIssue").css("display","none")
+                    $("#missingVehicle").css("display","none")
+                    $("#agentIssue").css("display","flex")
+                }
             })
         })
     </script>

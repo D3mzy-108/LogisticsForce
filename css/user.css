@@ -60,14 +60,22 @@ p, small{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     
 }
-.vehicle-upload-info input{    
+.vehicle-upload-info input{
     height: 35px;    
     border: 0;
     border-bottom: 2px solid #4b7f8a;
-    outline: 0;        
+    outline: 0;
     padding: 10px 10px ;
     font-family: 'Baloo 2', cursive;    
     font-size: 15px;
+}
+textarea{
+    border: 0;
+    border-bottom: 2px solid #4b7f8a;
+    outline: 0;
+    font-family: 'Baloo 2', cursive;    
+    font-size: 15px;
+    color: var(--txt_clr);
 }
 .vehicle-upload-info label{
     font-weight: 550;
@@ -111,10 +119,10 @@ p, small{
 .vehicle-upload-info{
     color: white;
 }
-.vehicle-upload-info input{
+.vehicle-upload-info input, textarea{
     background: none;
 }
-.vehicle-upload-info.light{
+.vehicle-upload-info.light, textarea.light{
     color: #222;
 }
 .vehicle-upload-info #plateNo{
@@ -183,4 +191,33 @@ header ul li.actv.light{
 }
 #home p b.light{
     color: var(--txt_clr_light);
+}
+
+#softwareIssue{
+    display: flex;
+}
+
+#missingVehicle, #agentIssue{
+    display: none;
+}
+small{
+    color: var(--txt_clr);
+}
+small.light{
+    color: var(--txt_clr_light);
+}
+
+#notifbtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    right: 10px;
+    bottom: 10px;
+    color: var(--txt_clr);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: var(--active_cont);
+    display: none;
 }
