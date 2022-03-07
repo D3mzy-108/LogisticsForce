@@ -84,7 +84,7 @@ $(document).ready(function () {
                   font: {
                     family: "'Baloo 2', cursive",
                     weight: "500",
-                    size: 13,
+                    size: 10,
                   },
                 },
               },
