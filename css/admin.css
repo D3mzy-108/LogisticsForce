@@ -341,7 +341,4 @@ input.light::placeholder, .fa-search.light{
   nav.active{
     margin-left: 0vw;
   }
-  .main{
-    height: 90vh;
-  }
 }
