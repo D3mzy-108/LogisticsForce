@@ -118,10 +118,13 @@ p, small{
     overflow-y: scroll;
     display: none;
 }
+.space{
+    height: 2vh;
+}
 
-/* @media screen and (max-width: 767px) {
-    header{
+@media screen and (max-width: 767px) {
+    /* header{
         position: absolute !important;
         top: 2vh;
-    }
-} */
+    } */
+}
