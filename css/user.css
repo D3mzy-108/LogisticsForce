@@ -2,9 +2,72 @@
     margin: 0;
     padding: 0;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6, label{
     font-family: 'Questrial', sans-serif;
 }
 p, small{
     font-family: 'Baloo 2', cursive;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.user-image{
+    width: 170px;
+    height: 170px;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.plate-no{
+    font-weight: 600;
+}
+
+.upload-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 1rem;    
+}
+.vehicle-upload-info{
+    display: grid;  
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    
+}
+.vehicle-upload-info input{    
+    height: 35px;    
+    border: 0;
+    border-bottom: 2px solid #4b7f8a;
+    outline: 0;        
+    padding: 10px 10px ;
+    font-family: 'Baloo 2', cursive;    
+    font-size: 15px;
+}
+.vehicle-upload-info label{
+    font-weight: 550;
+}
+.vehicle-upload-info input::placeholder{
+    font-family: 'Baloo 2', cursive;
+}
+.vehicle-upload-info .select-form {    
+    width: 60%;
+    outline: none;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #4b7f8a;
+    height: 35px;    
+    font-family: 'Baloo 2', cursive; 
+    font-size: 15px;
+    border-radius: 5px; 
+}
+.vehicle-upload-info .select-form:focus{
+    border: 2px solid transparent;
+    border-bottom: 2px solid #4b7f8a;
+}
+.vehicle-upload-info button{
+    width: 40%;
+    justify-self: center;
+    background-color: white;
+    border: 2px solid #4b7f8a;
+    padding: 5px 0;
+    border-radius: 7px;    
+}
+.vehicle-upload-info #plateNo{
+    text-transform: uppercase;
 }
