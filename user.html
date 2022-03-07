@@ -51,9 +51,9 @@
                 <div id="home" class="col-12 py-3">
                     <header class="col-11 col-md-12 mx-auto">
                         <ul class="px-0 mx-0 row">
-                            <li class="col text-center py-2 actv"><a href="#home" id="homeLink">Home</a></li>
-                            <li class="col text-center py-2"><a href="#report" id="reportLink">Report</a></li>
-                            <li class="col text-center py-2"><a href="#me" id="meLink">Me</a></li>
+                            <li class="col text-center py-2 actv"><a href="#home" class="homeLink">Home</a></li>
+                            <li class="col text-center py-2"><a href="#report" class="reportLink">Report</a></li>
+                            <li class="col text-center py-2"><a href="#me" class="meLink">Me</a></li>
                             <li class="col-2 col-md-1 text-center py-2 change_theme" style="cursor: pointer;"><i class="fa fa-moon-o px-2"></i></li>
                         </ul>
                     </header>
@@ -63,9 +63,9 @@
                 <div id="report" class="col-12 py-3">
                     <header class="col-11 col-md-12 mx-auto">
                         <ul class="px-0 mx-0 row">
-                            <li class="col text-center py-2"><a href="#home" id="homeLink">Home</a></li>
-                            <li class="col text-center py-2 actv"><a href="#report" id="reportLink">Report</a></li>
-                            <li class="col text-center py-2"><a href="#me" id="meLink">Me</a></li>
+                            <li class="col text-center py-2"><a href="#home" class="homeLink">Home</a></li>
+                            <li class="col text-center py-2 actv"><a href="#report" class="reportLink">Report</a></li>
+                            <li class="col text-center py-2"><a href="#me" class="meLink">Me</a></li>
                             <li class="col-2 col-md-1 text-center py-2 change_theme" style="cursor: pointer;"><i class="fa fa-moon-o px-2"></i></li>
                         </ul>
                     </header>
@@ -75,9 +75,9 @@
               <div id="me" class="col-12 py-3">
                 <header class="col-11 col-md-12 mx-auto">
                     <ul class="px-0 mx-0 row">
-                        <li class="col text-center py-2"><a href="#home" id="homeLink">Home</a></li>
-                        <li class="col text-center py-2"><a href="#report" id="reportLink">Report</a></li>
-                        <li class="col text-center py-2 actv"><a href="#me" id="meLink">Me</a></li>
+                        <li class="col text-center py-2"><a href="#home" class="homeLink">Home</a></li>
+                        <li class="col text-center py-2"><a href="#report" class="reportLink">Report</a></li>
+                        <li class="col text-center py-2 actv"><a href="#me" class="meLink">Me</a></li>
                         <li class="col-2 col-md-1 text-center py-2 change_theme" style="cursor: pointer;"><i class="fa fa-moon-o px-2"></i></li>
                     </ul>
                 </header>
@@ -200,17 +200,17 @@
 
     <script>
         $(document).ready(() => {
-            $("#homeLink").click(() => {
+            $(".homeLink").click(() => {
                 $("#homeSideBar").css("display", "block")
                 $("#reportSideBar").css("display", "none")
                 $("#meSideBar").css("display", "none")
             })
-            $("#reportLink").click(() => {
+            $(".reportLink").click(() => {
                 $("#reportSideBar").css("display", "block")
                 $("#homeSideBar").css("display", "none")
                 $("#meSideBar").css("display", "none")
             })
-            $("#meLink").click(() => {
+            $(".meLink").click(() => {
                 $("#meSideBar").css("display", "block")
                 $("#reportSideBar").css("display", "none")
                 $("#homeSideBar").css("display", "none")
