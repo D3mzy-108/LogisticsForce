@@ -58,6 +58,16 @@
                         </ul>
                     </header>
 
+                    <div class="tickets_bought col-12 d-flex align-items-center justify-content-center">
+                        <div class="text-center">
+                            <p>You have</p>
+                            <div class="d-flex align-items-end">
+                                <h1>3</h1>
+                                <small class="mb-4">ticket</small>
+                            </div>
+                        </div>
+                    </div>
+
                     <p>This is home</p>
                 </div>
                 <div id="report" class="col-12 py-3">
@@ -83,9 +93,9 @@
                 </header>
                 <div class="personal-info">
                     <div class="rounded-circle mx-auto user-image">
-                    <img src="/images/placeholder.jpg" class="img-fluid rounded-circle alt=">                
-                </div>
-                <p class="text-center py-2 h4">Username</p>
+                        <img src="/images/placeholder.jpg" class="img-fluid rounded-circle alt=">                
+                    </div>
+                    <p class="text-center py-2 h4">Username</p>
                 </div>
                 <h5 class="fw-bold">Vehicles: </h5>
     
@@ -215,6 +225,7 @@
                 $("#reportSideBar").css("display", "none")
                 $("#homeSideBar").css("display", "none")
             })
+            $(".change_theme").click(() => $(".change_theme i").toggleClass("fa-moon-o").toggleClass("fa-sun-o text-warning"))
         })
     </script>
     <script src="./js/main.js"></script>

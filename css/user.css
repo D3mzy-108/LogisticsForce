@@ -2,6 +2,35 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    /* Dark mode colors */
+    --txt_clr: #eef5ff;
+    --txt_red: #966990;
+    --txt_green: #4b7f8a;
+    --txt_dull: #71749f;
+    --active_nav: #39406c;
+    --border_left: #656dab;
+    --active_cont: #5b63b8;
+    --cont_bg: #292c59;
+    --body_gradient: linear-gradient(#374077, #22264b);
+    --main_gradient: #4b5598;
+    --sidebar_gradient: radial-gradient(circle at top right, #383f76, #23274d);
+  
+    /* Light mode colors */
+    --txt_clr_light: #27262b;
+    --txt_red_light: #6e5453;
+    --txt_green_light: #9cc8b9;
+    --txt_dull_light: #d1d1d1;
+    --active_nav_light: #f7f9f8;
+    --border_left_light: #9c97b5;
+    --active_cont_light: #6a74c9;
+    --cont_bg_light: #fff;
+    --body_light: #fff;
+    --main_light: #f1f2f7;
+    --sidebar_light: #fff;
+}
+
 h1,h2,h3,h4,h5,h6, label{
     font-family: 'Questrial', sans-serif;
 }
@@ -129,6 +158,28 @@ header ul li.actv {
 header ul li.actv.light{
     border-bottom: 3px solid var(--border_left_light);
     background: var(--active_nav_light);
+}
+
+.tickets_bought{
+    background-image: url(../images/user_bg_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: rgba(41, 44, 89, 0.8);
+    height: 30vh;
+}
+.tickets_bought.light{
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.767);
+}
+.tickets_bought h1{
+    font-size: 100px !important;
+}
+small{
+    color: var(--txt_clr);
+}
+small.light{
+    color: var(--txt_clr_light);
 }
 
 @media screen and (max-width: 767px) {
