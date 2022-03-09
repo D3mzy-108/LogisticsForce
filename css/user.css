@@ -221,3 +221,9 @@ small.light{
     background: var(--active_cont);
     display: none;
 }
+
+@media screen and (max-width: 767px) {
+    .tickets_bought{
+        clip-path: polygon(22% 0, 100% 0, 100% 0, 100% 75%, 77% 100%, 0 100%, 0 100%, 0 27%);
+    }
+}
