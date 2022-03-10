@@ -233,15 +233,19 @@ h6.light {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   font-family: "Baloo 2", cursive;
+  color: var(--txt_clr);
 }
 .cont.active {
   background: var(--active_cont);
+  color: var(--txt_clr);
 }
 .cont.light {
   background: var(--cont_bg_light);
+  color: var(--txt_clr_light);
 }
 .cont.active.light {
   background: var(--active_cont_light);
+  color: var(--txt_clr);
 }
 
 table {
@@ -327,7 +331,7 @@ input.light::placeholder, .fa-search.light{
 }
 
 #drivers table th, #drivers table td{
-  min-width: 100px !important;
+  min-width: fit-content !important;
   width: fit-content;
 }
 

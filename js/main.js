@@ -18,8 +18,9 @@ $(document).ready(function () {
             .toggleClass("text-light")
             .toggleClass("text-dark");
         });
+        $(".rt tr:nth-child(2)").addClass("active");
         routeDetails()
-        $(".rt td").click((e) => {
+        $(".rt tr td").click((e) => {
           $("tr").removeClass("active");
           $(e.target.parentElement).addClass("active");
           routeDetails()
@@ -136,6 +137,25 @@ $(document).ready(function () {
             },
           },
         });
+
+  $("#drivers_table tr:nth-child(2)").addClass("active")
+  driverDetails()
+  $("#drivers_table tr td").click((e) => {
+    $("tr").removeClass("active");
+    $(e.target.parentElement).addClass("active");
+    driverDetails()
+    window.location.replace("admin.html#drivers_details")
+  });
+
+  function driverDetails() {
+    $("#driver_name").text($("#drivers_table tr.active td:nth-child(2)").text());
+    $("#driver_phone_no").text($("#drivers_table tr.active td:nth-child(3)").text());
+    $("#driver_email").text($("#drivers_table tr.active td:nth-child(4)").text());
+    $("#driver_no_of_vehicles").text($("#drivers_table tr.active td:nth-child(5)").text());
+    $("#driver_last_active").text($("#drivers_table tr.active td:nth-child(6)").text());
+    $("#call_driver").attr("href",`tel:${$("#drivers_table tr.active td:nth-child(3)").text()}`)
+    $("#mail_driver").attr("href", `mailto:${$("#drivers_table tr.active td:nth-child(4)").text()}`)
+  }
 
 
 });

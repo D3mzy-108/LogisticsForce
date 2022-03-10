@@ -116,6 +116,8 @@
             </div>
             <div class="col-12 cont rt">
               <div class="col-12 p-2" style="overflow: scroll; max-height: 50vh">
+
+                <!-- ==================================TABLE===================================== -->
                 <table>
                   <tr>
                     <th class="px-3">S/N</th>
@@ -125,7 +127,7 @@
                     <th class="px-3">Sold</th>
                     <th class="px-3">Voided</th>
                   </tr>
-                  <tr class="active">
+                  <tr>
                     <td class="px-2">1</td>
                     <td class="px-2" style="width: 400px">Old Abeokuta Express Road</td>
                     <td class="px-2">500</td>
@@ -318,7 +320,7 @@
   
         <!-- DRIVERS -->
         <main class="col-12 d-flex" id="drivers">
-          <div class="col-12 col-lg-9 main px-3 pb-4">
+          <div class="col-12 col-lg-9 main px-3 pb-4" id="drivers_content">
             <header class="col-12 mx-auto my-3">
               <ul class="p-0 d-flex col-10">
                 <li class="px-3 py-2 active"><a href="#">Tickets</a></li>
@@ -352,23 +354,26 @@
               </div>
             </div>
             
-            <div class="cont p-3">
-              <table class="col-12" style="overflow: scroll; max-height: 50vh;">
+            <div class="cont p-3" style="overflow: scroll !important; max-height: 50vh;">
+              <table class="col-12" id="drivers_table">
                 <tr>
                   <th class="px-2">S/N</th>
                   <th class="px-2">Name</th>
                   <th class="px-2">Phone Number</th>
                   <th class="px-2">Email</th>
                   <th class="px-2">N<u>o</u> of vehicles owned</th>
+                  <th class="px-2">Last Active</th>
                 </tr>
                 <tr>
                   <td class="px-2">01</td>
                   <td class="px-2">Demilade</td>
-                  <td class="px-2">08128995400</td>
+                  <td class="px-2">+2348128995400</td>
                   <td class="px-2">demil.ayinde@gmail.com</td>
                   <td class="px-2">4</td>
+                  <td class="px-2">3 months ago</td>
                 </tr>
                 <tr>
+                  <td class="px-2">...</td>
                   <td class="px-2">...</td>
                   <td class="px-2">...</td>
                   <td class="px-2">...</td>
@@ -380,8 +385,31 @@
 
           </div>
           <div class="rightsidebar col-12 col-lg-3">
-            <div id="_details" class="p-3">
-              
+            <div id="drivers_details" class="p-3">
+              <div class="col-12">
+                <a href="#drivers_content"><i class="fa fa-angle-left fa-2x"></i></a>
+                <div class="rounded-circle col-6 mx-auto">
+                  <img src="./images/placeholder.jpg" alt="" class="image-fluid col-12 rounded-circle">
+                </div>
+                <h4 class="col-9 mx-auto text-center" id="driver_name">Username</h4>
+              </div>
+              <div class="col-12">
+                <div class="cont col-12 p-3 mt-3">Phone n<u>o</u>: <span id="driver_phone_no">xxxxx</span></div>
+                <div class="cont col-12 p-3 mt-3">Email: <span id="driver_email">xxxxx</span></div>
+                <div class="cont col-12 p-3 mt-3">N<u>o</u> of vehicles owned: <span id="driver_no_of_vehicles">xxxxx</span></div>
+                <div class="cont col-12 p-3 mt-3">Last active: <span id="driver_last_active">xxxxx</span></div>
+              </div>
+              <div class="col-12 d-flex">
+                <div class="col px-2 mt-3">
+                  <div class="cont p-2"><a id="call_driver"><i class="fa fa-phone"> Call user</i></a></div>
+                </div>
+                <div class="col px-2 mt-3">
+                  <div class="cont p-2"><a id="mail_driver"><i class="fa fa-envelope"> Mail user</i></a></div>
+                </div>
+              </div>
+              <div class="col-12 px-2 mt-3">
+                <div class="btn btn-danger col-12"><i class="fa fa-trash"> Remove User</i></div>
+              </div>
             </div>
           </div>
         </main>
@@ -394,144 +422,10 @@
     <script src="js/main.js"></script>
     <!-- <script>
       $(document).ready(function () {
-        $('*').addClass('light')
-        $("#menubtn").click(() => {
-          $("nav").toggleClass("active")
-        })
-        $("nav a").click((e) => {
-          $("nav li").removeClass("active");
-          $(e.target.parentElement).addClass("active");
-        });
-        $("header a").click((e) => {
-          $("header li").removeClass("active");
-          $(e.target.parentElement).addClass("active");
-        });
-        $(".change_theme").click(() => {
-          $("*").toggleClass("light");
-          $(".cont .cng_txt")
-            .toggleClass("text-light")
-            .toggleClass("text-dark");
-        });
-        routeDetails()
-        $(".rt td").click((e) => {
-          $("tr").removeClass("active");
-          $(e.target.parentElement).addClass("active");
-          routeDetails()
-          window.location.replace("admin.html#route_details")
-        });
-
-        function routeDetails() {
-            $("#route_details #no_of_sold_tickets span").text($(".rt tr.active td:nth-child(5)").text());
-            $("#route_details #no_of_void_tickets span").text($(".rt tr.active td:nth-child(6)").text()); 
-            
-            var no_of_penalties = 0;
-            var index = 1;
-            var fines = 0;
-            var obj
-            var compare
-
-            do {
-              if(document.querySelector(`.fn table tr:nth-child(${index + 1}) td:nth-child(3)`).textContent == document.querySelector(".rt tr.active td:nth-child(2)").textContent){
-                no_of_penalties += 1;
-                fines += parseInt($(`.fn table tr:nth-child(${index + 1}) td:nth-child(4)`).text())
-              }
-              $(".no_of_pen").text(no_of_penalties)
-              $(".no_of_fin").text(fines)
-
-              index++;
-            } while (index < $(".fn table tr").length);
-        }
-
-        const ctx = document.getElementById("myChart").getContext("2d");
-        const myChart = new Chart(ctx, {
-          type: "bar",
-          data: {
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"],
-            datasets: [
-              {
-                label: "#ticket sales in 7 days",
-                data: [12, 19, 3, 5, 2, 3, 7],
-                backgroundColor: [
-                  "rgba(255, 99, 132, 0.5)",
-                  "rgba(54, 162, 235, 0.5)",
-                  "rgba(255, 206, 86, 0.5)",
-                  "rgba(75, 192, 192, 0.5)",
-                  "rgba(153, 102, 255, 0.5)",
-                  "rgba(255, 159, 64, 0.5)",
-                ],
-                borderColor: [
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)",
-                ],
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            plugins: {
-              legend: {
-                labels: {
-                  // This more specific font property overrides the global property
-                  font: {
-                    family: "'Baloo 2', cursive",
-                    weight: "500",
-                    size: 13,
-                  },
-                },
-              },
-            },
-            scales: {
-              y: {
-                beginAtZero: true,
-              },
-            },
-          },
-        });
-        const radar_ctx = document.getElementById("radar_ctx").getContext("2d");
-
-        const radar = new Chart(radar_ctx, {
-          type: "radar",
-          data: {
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"],
-            datasets: [
-              {
-                label: "Sold",
-                data: [505, 425, 310, 236, 95, 467, 350],
-                fill: true,
-                backgroundColor: "rgba(54, 162, 235, 0.2)",
-                borderColor: "rgb(54, 162, 235)",
-                pointBackgroundColor: "rgb(54, 162, 235)",
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "rgb(255, 99, 132)",
-              },
-              {
-                label: "Voided",
-                data: [100, 198, 140, 119, 50, 193, 115],
-                fill: true,
-                backgroundColor: "rgba(255, 99, 132, 0.2)",
-                borderColor: "rgb(255, 99, 132)",
-                pointBackgroundColor: "rgb(255, 99, 132)",
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "#fff",
-                pointHoverBorderColor: "rgb(54, 162, 235)",
-              },
-            ],
-          },
-          options: {
-            elements: {
-              line: {
-                borderWidth: 3,
-              },
-            },
-          },
-        });
+        
       });
     </script> -->
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
       integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
