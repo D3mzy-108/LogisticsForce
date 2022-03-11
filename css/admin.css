@@ -330,7 +330,7 @@ input.light::placeholder, .fa-search.light{
   background: #eee;
 }
 
-#drivers table th, #drivers table td{
+#drivers table th, #drivers table td, #vehicle_table th, #vehicle_table td{
   min-width: fit-content !important;
   width: fit-content;
 }
