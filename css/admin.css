@@ -334,6 +334,10 @@ input.light::placeholder, .fa-search.light{
   min-width: fit-content !important;
   width: fit-content;
 }
+#drivers_details, #route_details{
+  overflow-y: scroll;
+  height: 100vh;
+}
 
 
 @media screen and (max-width: 767px) {
