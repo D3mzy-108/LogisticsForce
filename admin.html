@@ -43,7 +43,7 @@
         <ul class="p-0 col-12">
           <li class="active px-3 py-2 col-11"><a href="#analysis">Analysis</a></li>
           <li class="px-3 py-2 col-11"><a href="#drivers">Drivers</a></li>
-          <li class="px-3 py-2 col-11"><a href="#">Reports</a></li>
+          <li class="px-3 py-2 col-11"><a href="#reports">Feedback</a></li>
           <li class="px-3 py-2 col-11"><a href="#">Staff</a></li>
           <li
             class="mt-5 px-3 py-2 d-flex justify-content-between align-items-center"
@@ -322,12 +322,7 @@
         <main class="col-12 d-flex" id="drivers">
           <div class="col-12 col-lg-9 main px-3 pb-4" id="drivers_content">
             <header class="col-12 mx-auto my-3">
-              <ul class="p-0 d-flex col-10">
-                <li class="px-3 py-2 active"><a href="#">Tickets</a></li>
-                <li class="px-3 py-2"><a href="#">Routes</a></li>
-                <li class="px-3 py-2"><a href="#">Fines</a></li>
-                <li class="px-3 py-2"><a href="#">New</a></li>
-              </ul>
+              <h5 class="px-3 py-2"><b>Drivers Analysis</b></h5>
             </header>
             <div class="d-flex col-12">
               <div class="col-6 p-2">
@@ -450,6 +445,90 @@
           </div>
         </main>
 
+        <!-- REPORTS -->
+        <main class="col-12 d-flex" id="reports">
+          <div class="col-12 col-lg-9 main px-3 pb-4" id="report_content">
+            <header class="col-12 mx-auto my-3">
+              <ul class="p-0 m-0 d-flex">
+                <li class="px-3 py-2 col text-center active"><a href="#reviews">Reviews</a></li>
+                <li class="px-3 py-2 col text-center"><a href="#reports_sect">Reports</a></li>
+              </ul>
+            </header>
+            
+            <div class="col-12 d-flex" style="overflow-x: hidden;">
+              <div class="col-12" id="reviews">
+                
+                <!-- REVIEWS SECTION -->
+                <!-- MESSAGE HOLDER -->
+                <div class="messages_holder col-12 py-3">
+  
+                  <!-- MESSAGE CONTAINER -->
+                  <div class="message cont col-12 py-2 px-3 my-1">
+                    <div class="message_head d-flex justify-content-between align-items-center col-12 pb-2">
+                      
+                      <div class="d-flex">
+                        <i class="fa fa-user-circle fs-3 py-2"> </i>
+                        <div class="px-2">
+                          <b>Demilade</b><br>
+                          <small class="text-secondary">15/01/2022</small>
+                        </div>
+                      </div>
+  
+                      <!-- RATING -->
+                      <div class="d-flex">
+                        <div class="fa fa-star text-warning"></div>
+                        <div class="fa fa-star text-warning"></div>
+                        <div class="fa fa-star text-warning"></div>
+                        <div class="fa fa-star-o"></div>
+                        <div class="fa fa-star-o"></div>
+                      </div>
+                    </div>
+                    
+                    <!-- MESSAGE BODY -->
+                    <div class="message_body col-12" style="text-align: justify;">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint maiores velit, quo beatae id expedita mollitia soluta. Nesciunt soluta laborum explicabo officiis voluptate aut. Architecto corrupti blanditiis commodi! Asperiores, deserunt.</p>
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+              </div>
+              <div class="col-12" id="reports_sect">
+                
+                <!-- REPORTS SECTION -->
+                <!-- MESSAGE HOLDER -->
+                <div class="messages_holder col-12 py-3">
+  
+                  <!-- MESSAGE CONTAINER -->
+                  <div class="message cont col-12 py-2 px-3 my-1">
+                    <div class="message_head d-flex justify-content-between align-items-center col-12 pb-2">
+                      
+                      <div class="d-flex">
+                        <i class="fa fa-user-circle fs-3 py-2"> </i>
+                        <div class="px-2">
+                          <b>Demilade</b><br>
+                          <small class="text-secondary">15/01/2022</small>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- MESSAGE BODY -->
+                    <div class="message_body col-12" style="text-align: justify;">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint maiores velit, quo beatae id expedita mollitia soluta. Nesciunt soluta laborum explicabo officiis voluptate aut. Architecto corrupti blanditiis commodi! Asperiores, deserunt.</p>
+                    </div>
+  
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="rightsidebar col-12 col-lg-3"></div>
+        </main>
+
       </div>
     </div>
 
@@ -462,11 +541,7 @@
       });
     </script> -->
     
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
-      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   </body>
 </html>

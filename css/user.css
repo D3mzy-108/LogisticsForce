@@ -221,6 +221,15 @@ small.light{
     display: none;
 }
 
+#addVehicle, #removeVehicle{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+#addVehicle{color: green;}
+#removeVehicle{color: rgb(221, 25, 25);}
+
 @media screen and (max-width: 767px) {
     .tickets_bought{
         clip-path: polygon(22% 0, 100% 0, 100% 0, 100% 75%, 77% 100%, 0 100%, 0 100%, 0 27%);

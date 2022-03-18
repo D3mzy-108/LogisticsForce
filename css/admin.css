@@ -338,7 +338,24 @@ input.light::placeholder, .fa-search.light{
   overflow-y: scroll;
   height: 100vh;
 }
-
+.dropdown, .dropdown button{
+  color: var(--txt_clr) !important;
+}
+.dropdown.light, .dropdown button.light{
+  color: var(--txt_clr_light) !important;
+}
+.dropdown-menu{
+  background-color: var(--cont_bg) !important;
+}
+.dropdown-menu li a:hover{
+  background-color: var(--active_cont) !important;
+}
+.dropdown-menu li.light a:hover{
+  background-color: var(--main_light) !important;
+}
+.dropdown-menu.light{
+  background-color: var(--cont_bg_light) !important;
+}
 
 @media screen and (max-width: 767px) {
   nav{

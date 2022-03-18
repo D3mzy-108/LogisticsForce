@@ -138,6 +138,27 @@ $(document).ready(function () {
           },
         });
 
+
+  function checkVehicleOwner() {
+    for (let index = 1; index < $("#drivers_table tr").length; index++) {
+      var owner = $(`#drivers_table tr:nth-child(${index}) td:nth-child(2)`).text()
+      var num = 0;
+      console.log(owner);
+      for (let indx = 1; indx < $("#vehicle_table tr").length; indx++) {
+
+        if ($(`#vehicle_table tr:nth-child(${indx}) td:nth-child(5)`).text() == owner) {
+          num++;
+          $(`#drivers_table tr:nth-child(${index}) td:nth-child(5)`).text(num)
+          console.log(num);
+        }
+      
+      }
+            
+    }
+  }
+
+  checkVehicleOwner()
+
   $("#drivers_table tr:nth-child(2)").addClass("active")
   driverDetails()
   $("#drivers_table tr td").click((e) => {
@@ -156,7 +177,6 @@ $(document).ready(function () {
     $("#call_driver").attr("href",`tel:${$("#drivers_table tr.active td:nth-child(3)").text()}`)
     $("#mail_driver").attr("href", `mailto:${$("#drivers_table tr.active td:nth-child(4)").text()}`)
   }
-
 
 });
 
